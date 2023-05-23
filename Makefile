@@ -1,18 +1,15 @@
 linux:
-    GOOS=linux GOARCH=amd64 go build -o myapp-linux
+	go build -o app-linux
 
 arm:
-    GOOS=linux GOARCH=arm go build -o myapp-arm
+	GOOS=linux GOARCH=arm go build -o app-arm
 
 macos:
-    GOOS=darwin GOARCH=amd64 go build -o myapp-macos
+	go build -o app-macos
 
 windows:
-    GOOS=windows GOARCH=amd64 go build -o myapp-windows.exe
+	GOOS=windows go build -o app-windows.exe
 
 clean:
-    rm -f myapp-linux
-    rm -f myapp-arm
-    rm -f myapp-macos
-    rm -f myapp-windows.exe
-    docker rmi <IMAGE_TAG>
+	go clean
+	docker rmi <IMAGE_TAG>
