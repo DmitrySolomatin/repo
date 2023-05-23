@@ -1,3 +1,5 @@
+.PHONY: linux arm macos windows clean
+
 linux:
 	go build -o app-linux
 
