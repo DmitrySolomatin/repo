@@ -11,5 +11,5 @@ windows:
     GOOS=windows GOARCH=amd64 go build -o myapp-windows.exe
 
 clean:
-    rm -f myapp-linux myapp-arm myapp-macos myapp-windows.exe
+    rm -f myapp-linux myapp-arm myapp-macos myapp-windows.exe;
     docker rmi <IMAGE_TAG>
