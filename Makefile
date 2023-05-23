@@ -1,17 +1,15 @@
-.PHONY: linux arm macos windows clean
-
 linux:
-	go build -o app-linux
+    GOOS=linux GOARCH=amd64 go build -o myapp-linux
 
 arm:
-	GOOS=linux GOARCH=arm go build -o app-arm
+    GOOS=linux GOARCH=arm go build -o myapp-arm
 
 macos:
-	go build -o app-macos
+    GOOS=darwin GOARCH=amd64 go build -o myapp-macos
 
 windows:
-	GOOS=windows go build -o app-windows.exe
+    GOOS=windows GOARCH=amd64 go build -o myapp-windows.exe
 
 clean:
-	go clean
-	docker rmi <IMAGE_TAG>
+    rm -f myapp-linux myapp-arm myapp-macos myapp-windows.exe
+    docker rmi <IMAGE_TAG>
