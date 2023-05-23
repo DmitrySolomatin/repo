@@ -15,4 +15,4 @@ clean:
     rm -f myapp-arm
     rm -f myapp-macos
     rm -f myapp-windows.exe
-    docker rmi <IMAGE_TAG>  
+    docker rmi <IMAGE_TAG>
