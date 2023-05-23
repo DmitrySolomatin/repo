@@ -10,7 +10,7 @@ macos:
 windows:
     GOOS=windows GOARCH=amd64 go build -o myapp-windows.exe
 
-clean:
+clean
     rm -f myapp-linux
     rm -f myapp-arm
     rm -f myapp-macos
