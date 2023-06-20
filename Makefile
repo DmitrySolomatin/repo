@@ -15,4 +15,5 @@ windows:
     go build -o myapp-windows.exe
 
 clean:
-    docker rmi v1
+    docker rmi <IMAGE_TAG>
+    
