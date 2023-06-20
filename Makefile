@@ -12,3 +12,4 @@ windows:
 
 clean:
     docker rmi <IMAGE_TAG>
+    
