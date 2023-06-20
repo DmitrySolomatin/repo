@@ -11,5 +11,5 @@ windows:
     GOOS=windows GOARCH=amd64 go build -o myapp-windows.exe
 
 clean:
-    docker rmi <IMAGE_TAG>
+    docker rmi v1
     
